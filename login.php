@@ -54,7 +54,7 @@
 					    $password = test_input($_POST["password"]);
 					  }
 						if ($name=="krishna" && $password=="12345") {
-							header("Location:office system.html");
+							header("Location:office system.php");
 					
 						}
 						else{
@@ -73,12 +73,12 @@
 	</header>
 		<nav id="menu">
 			<ul class="links">
-				<li><a href="index.html">Home</a></li>
+				<li><a href="index.php">Home</a></li>
 				<li><a href="#">Acet Shop</a></li>
 				<li><a href="#">Acet Courses</a></li>
-				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="contact.php">Contact Us</a></li>
 				<li><a href="login.php" class="active">Log In</a></li>
-				<li><a href="about.html">About Us</a></li>
+				<li><a href="about.php">About Us</a></li>
 				<li><a href="elements.php">Elements</a></li>
 			</ul>
 		</nav>

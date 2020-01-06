@@ -26,7 +26,7 @@
 		<!-- Nav -->
 			<nav id="menu">
 				<ul class="links">
-				<li><a href="index.html"> Home</a></li>
+				<li><a href="index.php"> Home</a></li>
 				<li><a href="acet shop.php">Acet Shop</a></li>
 				<li><a href="#">Acet Courses</a></li>
 

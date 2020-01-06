@@ -94,10 +94,10 @@
 		<!-- Nav -->
 			<nav id="menu">
 				<ul class="links">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<li><a href="#">Acet Shop</a></li>
 					<li><a href="#">Acet Courses</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
+					<li><a href="contact.php">Contact Us</a></li>
 					<li><a href="logOut.php">Log Out</a></li>
 					<li><a href="formvalid.php">About Us</a></li>
 					<li><a href="elements.php">Elements</a></li>

@@ -14,7 +14,7 @@
 		
 		<!-- Header -->
 			<header id="header">
-				<a class="logo" href="office system.html">A-CET Computers</a>
+				<a class="logo" href="office system.php">A-CET Computers</a>
 				<nav>
 					<a href="#menu">Menu</a>
 				</nav>
@@ -26,12 +26,12 @@
 		<!-- Nav -->
 			<nav id="menu">
 				<ul class="links">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<li><a href="acet shop.php">Acet Shop</a></li>
 					<li><a href="#">Acet Courses</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
+					<li><a href="contact.php">Contact Us</a></li>
 					<li><a href="logOut.php">Log Out</a></li>
-					<li><a href="about.html">About Us</a></li>
+					<li><a href="about.php">About Us</a></li>
 					<li><a href="elements.php">Elements</a></li>
 				</ul>
 			</nav>
