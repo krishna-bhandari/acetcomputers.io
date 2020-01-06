@@ -90,7 +90,7 @@
 			
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 				    <div class="imgcontainer">
-				      <img src="images/capture.png" alt="Avatar" class="avatar">
+				      <img src="images/Capture.png" alt="Avatar" class="avatar">
 				    </div>
 
 				    <div class="container">
