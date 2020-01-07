@@ -9,9 +9,6 @@
 <style>
 .error {color: #FF0000;}
 </style>
-</head>
-<body>  
-
 <?php
 // define variables and set to empty values
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
@@ -38,15 +35,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   }
     
-  if (empty($_POST["website"])) {
-    $website = "";
-  } else {
-    $website = test_input($_POST["website"]);
+  // if (empty($_POST["website"])) {
+  //   $website = "";
+  // } else {
+  //   $website = test_input($_POST["website"]);
     // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
-    if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
-      $websiteErr = "Invalid URL"; 
-    }
-  }
+  //   if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
+  //     $websiteErr = "Invalid URL"; 
+  //   }
+  // }
 
   if (empty($_POST["comment"])) {
     $comment = "";
@@ -69,11 +66,43 @@ function test_input($data) {
 }
 ?>
 
-<h2>PHP Form Validation Example</h2>
+</head>
+<body>  
+<header id="header">
+    <a class="logo" href="index.php">A-CET Computers</a>
+    <nav>
+      <a href="#menu">Menu</a>
+    </nav>
+  </header>
+    <nav id="menu">
+      <ul class="links">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="#">Acet Shop</a></li>
+        <li><a href="#">Acet Courses</a></li>
+        <li><a href="contact.php">Contact Us</a></li>
+        <li><a href="login.php" class="active">Log In</a></li>
+        <li><a href="about.php">About Us</a></li>
+        <li><a href="elements.php">Elements</a></li>
+      </ul>
+    </nav>
+
+<!-- <h2>PHP Form Validation Example</h2> -->
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
 	<div class="row gtr-uniform">
+    <div class="col-6 col-12-xsmall">
+        <label for="entry number"><b>Entry Number</b></label>
+        <input type="text" placeholder="" name="customer_name" id="entry_number" value="" readonly=""><br>
+        <!-- <span class="error"> *<?php echo $nameErr;?></span> -->
+    </div>
+      <div class="col-6 col-12-xsmall">
+        <label for="Date"><b>Date :</b></label>
+        <input type="Date" placeholder="" name="date" id="date" value="<?php
+echo date("d/M/Y") ;
+?>" readonly=""><br>
+        <!-- <span class="error"> *<?php echo $nameErr;?></span> -->
+    </div>
 		    	<!-- customer name input -->
 		<div class="col-6 col-12-xsmall">
 	      <label for="customer_name"><b>Customer Name</b></label>
