@@ -60,7 +60,7 @@
 						<section>
 							<div class="content">
 								<header>
-									<a href="fieldEntry.php" class="icon fa-print"><span class="label">Icon</span>
+									<a href="fieldEntry.php" class="icon fa-book"><span class="label">Icon</span>
 									<h3>field entry</h3></a>
 								</header>
 							
@@ -69,7 +69,7 @@
 						<section>
 							<div class="content">
 								<header>
-									<a href="entryBook.php" class="icon fa-camera"><span class="label">Icon</span>
+									<a href="entryBook.php" class="icon fa-pen"><span class="label">Icon</span>
 									<h3>entry book</h3></a>
 								</header>
 							

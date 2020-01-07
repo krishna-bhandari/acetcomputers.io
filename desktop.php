@@ -99,7 +99,7 @@ function test_input($data) {
       <div class="col-6 col-12-xsmall">
         <label for="Date"><b>Date :</b></label>
         <input type="text" placeholder="" name="date" id="date" value="<?php
-echo date("d/M/Y") ;?>" readonly=""><br>
+echo "<b>".date("d/M/Y")."</b>" ;?>" readonly=""><br>
         <!-- <span class="error"> *<?php echo $nameErr;?></span> -->
     </div>
 		    	<!-- customer name input -->
