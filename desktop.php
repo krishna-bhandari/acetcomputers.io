@@ -91,7 +91,7 @@ function test_input($data) {
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
 	<div class="row gtr-uniform">
-    <div class="col-6 col-12-xsmall">
+    <div class="off-6 col-12-xsmall">
         <label for="entry number"><b>Entry Number</b></label>
         <input type="text" placeholder="" name="customer_name" id="entry_number" value="" readonly=""><br>
         <!-- <span class="error"> *<?php echo $nameErr;?></span> -->
