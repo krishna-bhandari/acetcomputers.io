@@ -96,11 +96,10 @@ function test_input($data) {
         <input type="text" placeholder="" name="customer_name" id="entry_number" value="" readonly=""><br>
         <!-- <span class="error"> *<?php echo $nameErr;?></span> -->
     </div>
-      <div class="col-6 col-12-xsmall">
+      <div class="off-6 col-12-xsmall">
         <label for="Date"><b>Date :</b></label>
-        <input type="Date" placeholder="" name="date" id="date" value="<?php
-echo date("d/M/Y") ;
-?>" readonly=""><br>
+        <input type="text" placeholder="" name="date" id="date" value="<?php
+echo date("d/M/Y") ;?>" readonly=""><br>
         <!-- <span class="error"> *<?php echo $nameErr;?></span> -->
     </div>
 		    	<!-- customer name input -->
@@ -131,7 +130,7 @@ echo date("d/M/Y") ;
 						<option value="">Motherboard</option>
 						<option value="">Full CPU</option>
 						<option value="">Monitor</option>
-						<option value=""></option>
+						<option value="">Others</option>
 					</select>
 					<span class="error"> <?php echo $deviceErr;?></span>
 		<br><br>	
@@ -139,50 +138,36 @@ echo date("d/M/Y") ;
 		<div class="col-12 col-12-xsmall">
 		      <label for="device detail"><b>Device detail</b></label>
 		      <input type="text" placeholder="Enter device detail" name="device_detail" id="device_detail" value=""><br>
-		      <span class="error"> *<?php echo $nameErr;?></span></div>
+		      <!-- <span class="error"> *<?php echo $Err;?></span></div> -->
 		<br><br>
 		      	<!-- password input -->
 		      	<div class="col-6 col-12-xsmall">
-		      <label for="psw"><b>Password</b></label>
-		      <input type="password" placeholder="Enter Password" name="password" id="password" ><br>
-		      <span class="error">*<?php echo $passwordErr;?></span></div>
-		<br><br>
+		      <label for="technician"><b>Technician</b></label>
+		      <input type="text" placeholder="Enter technician name" name="technician" id="technician" ><br>
+		      <!-- <span class="error">*<?php echo $passwordErr;?></span></div> -->
     </div>
-</form>
-
-
- <!--  Name: <input type="text" name="name" value="<?php echo $name;?>">
-  <span class="error">* <?php echo $nameErr;?></span>
-  <br><br>
-  E-mail: <input type="text" name="email" value="<?php echo $email;?>">
-  <span class="error">* <?php echo $emailErr;?></span>
-  <br><br>
-  Website: <input type="text" name="website" value="<?php echo $website;?>">
-  <span class="error"><?php echo $websiteErr;?></span>
-  <br><br>
-  Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
-  <br><br>
-  Gender:
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other  
-  <span class="error">* <?php echo $genderErr;?></span>
-  <br><br>
+        <div class="col-6 col-12-xsmall">
+          <label for="solution"><b>Solution</b></label>
+          <input type="text" placeholder="Solution" name="solution" id="solution" ><br>
+          <!-- <span class="error">*<?php echo $passwordErr;?></span></div> -->
+    </div>    <div class="col-6 col-12-xsmall">
+          <label for="status"><b>Status</b></label>
+          <select>
+            <option value="New Arrived">New Arrived</option>
+            <option value="Waiting">Waiting</option>
+            <option value="Return">Return</option>
+            <option value="Completed">Completed</option>
+            <option value="Dispatched">Dispatched</option>
+          </select>
+          <!-- <input type="text" placeholder="" name="technician" id="technician" ><br> -->
+          <!-- <span class="error">*<?php echo $passwordErr;?></span></div> -->
+    </div>
   <input type="submit" name="submit" value="Submit">  
+  <input type="reset" name="reset" value="Reset">
+
 </form>
 
-<?php
-echo "<h2>Your Input:</h2>";
-echo $name;
-echo "<br>";
-echo $email;
-echo "<br>";
-echo $website;
-echo "<br>";
-echo $comment;
-echo "<br>";
-echo $gender;
-?> -->
+
 
 </body>
 </html>
