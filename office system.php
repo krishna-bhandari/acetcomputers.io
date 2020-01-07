@@ -8,6 +8,8 @@
 		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
 	</head>
 	<body class="is-preload" onload="">
 		<!-- login script -->
