@@ -66,7 +66,7 @@
 
 <body class="is-preload">
 	<header id="header">
-		<a class="logo" href="index.html">A-CET Computers</a>
+		<a class="logo" href="index.php">A-CET Computers</a>
 		<nav>
 			<a href="#menu">Menu</a>
 		</nav>
