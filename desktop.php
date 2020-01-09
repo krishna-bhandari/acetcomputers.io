@@ -148,7 +148,7 @@ function test_input($data) {
           <label for="solution"><b>Solution</b></label>
           <input type="text" placeholder="Solution" name="solution" id="solution" ><br>
     </div>    
-    <div class="col-6 col-12-xsmall">
+    <div class="col-12 col-12-xsmall">
           <label for="status"><b>Status</b></label>
           <select>
             <option value="New Arrived">New Arrived</option>
@@ -159,9 +159,11 @@ function test_input($data) {
           </select>
           <span class="error">*<?php echo $statusErr;?></span></div>
     </div>
+    <div class="col-12 col-12-xsmall">
+
   <input type="submit" name="submit" value="Submit">  
   <input type="reset" name="reset" value="Reset">
-
+</div>
 </form>
 </body>
 </html> 
