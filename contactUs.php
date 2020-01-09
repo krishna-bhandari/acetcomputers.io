@@ -56,8 +56,8 @@
 
 infowindow.open(map,marker);
 var marker = new google.maps.Marker({position: myCenter});
-
 marker.setMap(map);
+
 function myMap() {
 var mapProp= {
   center:new google.maps.LatLng(51.508742,-0.120850),

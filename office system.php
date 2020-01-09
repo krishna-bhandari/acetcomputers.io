@@ -31,7 +31,7 @@
 					<li><a href="index.php">Home</a></li>
 					<li><a href="acet shop.php">Acet Shop</a></li>
 					<li><a href="#">Acet Courses</a></li>
-					<li><a href="contact.php">Contact Us</a></li>
+					<li><a href="contactUs.php">Contact Us</a></li>
 					<li><a href="logOut.php">Log Out</a></li>
 					<li><a href="about.php">About Us</a></li>
 					<li><a href="elements.php">Elements</a></li>
