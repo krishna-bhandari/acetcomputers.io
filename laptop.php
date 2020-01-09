@@ -56,6 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $status = test_input($_POST["status"]);
   }
 }
+}
 
 function test_input($data) {
   $data = trim($data);

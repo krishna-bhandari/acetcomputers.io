@@ -56,6 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $status = test_input($_POST["status"]);
   }
 }
+}
 
 function test_input($data) {
   $data = trim($data);
@@ -162,9 +163,5 @@ function test_input($data) {
   <input type="reset" name="reset" value="Reset">
 
 </form>
-
-
-
 </body>
-</html>
- 
+</html> 
