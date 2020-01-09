@@ -122,8 +122,8 @@ function test_input($data) {
 		      <span class="error"> *<?php echo $addressErr;?></span></div>
 		<br><br>
 		      	<!-- device selection -->
-		      	<div class="col-6 col-12-xsmall">
-		      <label for="psw"><b>Device :</b></label>
+		    <div class="col-6 col-12-xsmall">
+		      <label for="device"><b>Device :</b></label>
 		     	<select name="device" id="category">
 						<option value="">- Select -</option>
 						<option value="Motherboard">Motherboard</option>
@@ -132,7 +132,7 @@ function test_input($data) {
 						<option value="Others">Others</option>
 					</select>
 					<span class="error"> <?php echo $deviceErr;?></span>
-		<br><br>	
+		<br><br>	</div>
 		<!-- device detail -->
 		<div class="col-12 col-12-xsmall">
 		      <label for="device detail"><b>Device detail</b></label>

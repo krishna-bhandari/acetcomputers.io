@@ -92,78 +92,82 @@ function test_input($data) {
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
 	<div class="row gtr-uniform">
-    <div class="col-6 col-12-xsmall">
-        <label for="entry number"><b>Entry Number</b></label>
-        <input type="text" placeholder="" name="entry_number" id="entry_number" value="" readonly=""><br>
-    </div>
-      <div class="col-6 col-12-xsmall">
-        <label for="Date"><b>Date :</b></label>
-        <input type="text" placeholder="" name="date" id="date" value="<?php
-              echo date("d/M/Y").date("D");?>" readonly=""><br>
-    </div>
-		    	<!-- customer name input -->
+	    <div class="col-6 col-12-xsmall">
+	        <label for="entry number"><b>Entry Number</b></label>
+	        <input type="text" placeholder="" name="entry_number" id="entry_number" value="" readonly=""><br>
+	    </div>
+	    <div class="col-6 col-12-xsmall">
+	        <label for="Date"><b>Date :</b></label>
+	        <input type="text" placeholder="" name="date" id="date" value="<?php
+	        echo date("d/M/Y").date("D");?>" readonly=""><br>
+	    </div>
+			    	<!-- customer name input -->
 		<div class="col-6 col-12-xsmall">
-	      <label for="customer_name"><b>Customer Name</b></label>
-	      <input type="text" placeholder="Enter Customer Name" name="customer_name" id="name" value=""><br>
-	      <span class="error"> *<?php echo $customer_nameErr;?></span>
+		      <label for="customer_name"><b>Customer Name</b></label>
+		      <input type="text" placeholder="Enter Customer Name" name="customer_name" id="name" value=""><br>
+		      <span class="error"> *<?php echo $customer_nameErr;?></span>
 		</div>
 		<br><br>
-		      	<!-- contact input -->
+			      	<!-- contact input -->
 		<div class="col-6 col-12-xsmall">
-	      <label for="contact"><b>Contact</b></label>
-	      <input type="text" placeholder="Enter Contact" name="contact" id="contact" ><br>
-	      <span class="error">*<?php echo $contactErr;?></span>
+		      <label for="contact"><b>Contact</b></label>
+		      <input type="text" placeholder="Enter Contact" name="contact" id="contact" ><br>
+		      <span class="error">*<?php echo $contactErr;?></span>
 		</div>
-		<br><br>
-		<!-- address input-->
-		    	<div class="col-6 col-12-xsmall">
-		      <label for="address"><b>Address</b></label>
-		      <input type="text" placeholder="Enter address" name="address" id="address" value=""><br>
-		      <span class="error"> *<?php echo $addressErr;?></span></div>
-		<br><br>
-		      	<!-- device selection -->
-		      	<div class="col-6 col-12-xsmall">
-		      <label for="psw"><b>Device :</b></label>
-		     	<select name="device" id="category">
-						<option value="">- Select -</option>
-						<option value="Motherboard">HP</option>
-						<option value="Full CPU">Dell</option>
-						<option value="Monitor">Acer</option>
-						<option value="Others">Toshiba</option>
-						<option value="Others">Asus</option>
-						<option value="Others">Lenovo</option>
-						<option value="Others">Fujitsu</option>
-						<option value="Others">Compaq</option>
-						<option value="Others">Mac</option>
-						<option value="Others">emachine</option>
-						<option value="Others">Wipro</option>
-					</select>
-					<span class="error"> <?php echo $deviceErr;?></span>
-		<br><br>	
-		<!-- device detail -->
+			<br><br>
+			<!-- address input-->
+		<div class="col-6 col-12-xsmall">
+			      <label for="address"><b>Address</b></label>
+			      <input type="text" placeholder="Enter address" name="address" id="address" value=""><br>
+			      <span class="error"> *<?php echo $addressErr;?></span>
+		</div>
+			<br><br>
+			      	<!-- device selection -->
+		<div class="col-6 col-12-xsmall">
+			      <label for="psw"><b>Device :</b></label>
+			     	<select name="device" id="category">
+							<option value="">- Select -</option>
+							<option value="Motherboard">HP</option>
+							<option value="Full CPU">Dell</option>
+							<option value="Monitor">Acer</option>
+							<option value="Others">Toshiba</option>
+							<option value="Others">Asus</option>
+							<option value="Others">Lenovo</option>
+							<option value="Others">Fujitsu</option>
+							<option value="Others">Compaq</option>
+							<option value="Others">Mac</option>
+							<option value="Others">emachine</option>
+							<option value="Others">Wipro</option>
+						</select>
+						<span class="error"> <?php echo $deviceErr;?></span>
+		</div>
+			<br><br>	
+			<!-- device detail -->
 		<div class="col-12 col-12-xsmall">
-		      <label for="device detail"><b>Device detail</b></label>
-		      <input type="text" placeholder="Enter device detail" name="device_detail" id="device_detail" value=""><br></div>
-		<br><br>
-		      	<!-- technician input -->
-		      	<div class="col-6 col-12-xsmall">
-		      <label for="technician"><b>Technician</b></label>
-		      <input type="text" placeholder="Enter technician name" name="technician" id="technician" ><br>
-    </div>
-        <div class="col-6 col-12-xsmall">
-          <label for="solution"><b>Solution</b></label>
-          <input type="text" placeholder="Solution" name="solution" id="solution" ><br>
-    </div>    
-    <div class="col-6 col-12-xsmall">
-          <label for="status"><b>Status</b></label>
-          <select>
-            <option value="New Arrived">New Arrived</option>
-            <option value="Waiting">Waiting</option>
-            <option value="Return">Return</option>
-            <option value="Completed">Completed</option>
-            <option value="Dispatched">Dispatched</option>
-          </select>
-          <span class="error">*<?php echo $statusErr;?></span></div>
+			      <label for="device detail"><b>Device detail</b></label>
+			      <input type="text" placeholder="Enter device detail" name="device_detail" id="device_detail" value=""><br>
+		</div>
+			<br><br>
+			      	<!-- technician input -->
+		<div class="col-6 col-12-xsmall">
+			      <label for="technician"><b>Technician</b></label>
+			      <input type="text" placeholder="Enter technician name" name="technician" id="technician" ><br>
+	    </div>
+	       <div class="col-6 col-12-xsmall">
+	          <label for="solution"><b>Solution</b></label>
+	          <input type="text" placeholder="Solution" name="solution" id="solution" ><br>
+	    </div>    
+	    <div class="col-6 col-12-xsmall">
+	          <label for="status"><b>Status</b></label>
+	          <select>
+	            <option value="New Arrived">New Arrived</option>
+	            <option value="Waiting">Waiting</option>
+	            <option value="Return">Return</option>
+	            <option value="Completed">Completed</option>
+	            <option value="Dispatched">Dispatched</option>
+	          </select>
+	          <span class="error">*<?php echo $statusErr;?></span>
+	    </div>
     </div>
   <input type="submit" name="submit" value="Submit">  
   <input type="reset" name="reset" value="Reset">
