@@ -1041,7 +1041,12 @@ ul.actions {
     box-sizing: border-box; }
   .row.gtr-uniform > * > :last-child {
     margin-bottom: 0; }
-
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  height: 50%;
+  padding: 20px;
+}
 .row > .imp {
   order: -1; }
 .row > .col-1 {

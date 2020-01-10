@@ -60,22 +60,7 @@
 					  } else {
 					    $topic = test_input($_POST["select"]);
 					  }
-					  // if (empty($_POST["gender"])) {
-					  //   $genderErr = "Gender is required";
-					  // } else {
-					  //   $topic = test_input($_POST["gender"]);
-					  // }
-
-					 // 	echo "<h2>Your Input:</h2>";
-						// echo $name;echo "<br>"; 
-						// echo $topic;echo "<br>"; 
-						// echo $contact;echo "<br>"; 
-						// echo $email;echo "<br>";
-						// echo $source;echo "<br>";
-						// echo $gender;echo "<br>";
-						// echo $address;echo "<br>";
-						// echo $description;
-						
+				
 					 }
 	?>
 </head>
@@ -97,9 +82,9 @@
 					<li><a href="index.php">Home</a></li>
 					<li><a href="#">Acet Shop</a></li>
 					<li><a href="#">Acet Courses</a></li>
-					<li><a href="contact.php">Contact Us</a></li>
+					<li><a href="contactUs.php">Contact Us</a></li>
 					<li><a href="logOut.php">Log Out</a></li>
-					<li><a href="formvalid.php">About Us</a></li>
+					<!-- <li><a href="formvalid.php">About Us</a></li> -->
 					<li><a href="elements.php">Elements</a></li>
 				</ul>
 			</nav>

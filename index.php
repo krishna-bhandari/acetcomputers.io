@@ -31,9 +31,9 @@
 				<li><a href="acet shop.php">Acet Shop</a></li>
 				<li><a href="#">Acet Courses</a></li>
 
-				<li><a href="#">Contact Us</a></li>
+				<li><a href="contactUs.php">Contact Us</a></li>
 				<li><a href="login.php">Log In</a></li>
-				<li><a href="#">About Us</a></li>
+				<!-- <li><a href="#">About Us</a></li> -->
 				<li><a href="elements.php">Elements</a></li>
 
 
@@ -128,48 +128,8 @@
 						<h2>Faucibus consequat lorem</h2>
 						<p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor.</p>
 					</header>
-					<div class="testimonials">
-						<!-- <section>
-							<div class="content">
-								<blockquote>
-									<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-								</blockquote>
-								<div class="author">
-									<div class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</div>
-									<p class="credit">- <strong>Jane Doe</strong> <span>CEO - ABC Inc.</span></p>
-								</div>
-							</div>
-						</section> -->
-						<!-- <section> -->
-							<!-- <div class="content">
-								<blockquote>
-									<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-								</blockquote>
-								<div class="author">
-									<div class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</div>
-									<p class="credit">- <strong>John Doe</strong> <span>CEO - ABC Inc.</span></p>
-								</div>
-							</div> -->
-						<!-- </section> -->
-						<!-- <section>
-							<div class="content">
-								<blockquote>
-									<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-								</blockquote>
-								<div class="author">
-									<div class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</div>
-									<p class="credit">- <strong>Janet Smith</strong> <span>CEO - ABC Inc.</span></p>
-								</div>
-							</div>
-						</section> -->
+	
 					</div>
-				</div>
 			</section>			
 
 		<!-- Footer -->
@@ -186,7 +146,7 @@
 							<ul class="plain">
 								<li><a href="https://www.facebook.com/acetservices.support/"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
 								<li><a href="https://www.instagram.com/acetservicesandsupport/"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
-								<!-- <li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li> -->
+								
 							</ul>
 						</section>
 					</div>
