@@ -39,7 +39,7 @@
 
 	<section class="wrapper">
 		<div class="inner">
-			<div class="highlights">
+			
 				<div class="row gtr-uniform">
 				    <div class="col-10 col-12-xsmall">
 				      <h1 class="xlarge-font"><b>A-CET Computers</b></h1>
@@ -51,7 +51,7 @@
 				   <!--  <div class="col-6 col-12-xsmall"> 
 					<iframe src="https://www.google.com/maps/place/A-cet+Computer(laptop+repairing+center)+training+center+for+laptop+and+mobile/@27.6921803,84.427394,19.86z/data=!4m5!3m4!1s0x0:0x83575ba52b87e479!8m2!3d27.6922415!4d84.4273943" width="400" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
 				    </div> -->
-				</div>
+			
   			</div>
 		</div>
 	</section>
