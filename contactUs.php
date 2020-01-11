@@ -41,16 +41,17 @@
 		<div class="inner">
 			
 				<div class="row gtr-uniform">
-				    <div class="col-10 col-12-xsmall">
+				    <div class="col-6 col-12-xsmall">
 				      <h1 class="xlarge-font"><b>A-CET Computers</b></h1>
 				      <h1 class="large-font" style="color:MediumSeaGreen;"><b>Any Concerns 		and Questions</b></h1>
 				        <p><span style="font-size:36px">CALL US NOW 056 533268, 9745039024</span></p>
 				        <p>Address: Bharatpur-2, Kshetrapur Height, Chitwan</p>
 				       <p>Phone:056-533268</p>
 				    </div>
-				   <!--  <div class="col-6 col-12-xsmall"> 
-					<iframe src="https://www.google.com/maps/place/A-cet+Computer(laptop+repairing+center)+training+center+for+laptop+and+mobile/@27.6921803,84.427394,19.86z/data=!4m5!3m4!1s0x0:0x83575ba52b87e479!8m2!3d27.6922415!4d84.4273943" width="400" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-				    </div> -->
+				    <div class="col-6 col-12-xsmall"> 
+					<!-- <iframe src="https://www.google.com/maps/place/A-cet+Computer(laptop+repairing+center)+training+center+for+laptop+and+mobile/@27.6921803,84.427394,19.86z/data=!4m5!3m4!1s0x0:0x83575ba52b87e479!8m2!3d27.6922415!4d84.4273943" width="400" height="350" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+					<img src="images/location.png" width="400" height="400">
+				    </div>
 			
   			</div>
 		</div>
