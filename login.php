@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+session_start();
+ ?>
 <html>
 <head>
 	<title>log in</title>
@@ -24,44 +27,41 @@
 			}
 	</style>
 	<?php
-						// define variables and set to empty values
-				$name = $password = "";
-				$nameErr = $passwordErr = $loginErr = "";
-				if ($_SERVER["REQUEST_METHOD"] == "POST") 
-				{
-					$name = test_input($_POST["name"]);
-					$password = test_input($_POST["password"]);
-					
-				}
+	  	// define variables and set to empty values
+		$name = $password ="";
+		$loginErr = "";
+		if ($_SERVER["REQUEST_METHOD"] == "POST") 
+		{
+				$name = $_POST["name"];
+				$password = $_POST["password"];
+            $connection=mysqli_connect('localhost','root','','acet_db');
+            if (!$connection) {
+    		die('Could not connect: ' . mysqli_error($connection));
+			}
+            $sql = " SELECT * from login";
+            $result = $connection -> query($sql);
+  
+            if ($result -> num_rows > 0) 
+            {
+              while ($row = $result -> fetch_assoc()) 
+              {
+	               // echo ("connected successfully");
+	              	if ($row["user_name"]==$name && $row["password"]==$password) {
+	              		$_SESSION["user"]=$name;
+	              		$_SESSION["pass"]=$password;
+	              	}
+	              	else{
+	            	$loginErr="Invalid User name or Password";
+	            	}
 
-				function test_input($data) {
-					  $data = trim($data);
-					  $data = stripslashes($data);
-					  $data = htmlspecialchars($data);
-					  return $data;
-						}
-						// check the input
-				if ($_SERVER["REQUEST_METHOD"] == "POST") {
-					if (empty($_POST["name"])) {
-					    $nameErr = "User Name is required";
-					 } else {
-					    $name = test_input($_POST["name"]);
-					 }
-
-					if (empty($_POST["password"])) {
-					    $passwordErr = "Password is required";
-					  } else {
-					    $password = test_input($_POST["password"]);
-					  }
-						if ($name=="krishna" && $password=="12345") {
-							header("Location:office system.php");
-					
-						}
-						else{
-						$loginErr="user name or password is invalid";
-						}
-				}
-	?>
+             	}
+             	if (isset($_SESSION["user"])) {
+	    	           	header("location:office system.php");
+             		
+             	}
+            }
+        } 
+    ?>
 </head>
 
 <body class="is-preload">
@@ -76,10 +76,10 @@
 				<li><a href="index.php">Home</a></li>
 				<li><a href="#">Acet Shop</a></li>
 				<li><a href="#">Acet Courses</a></li>
-				<li><a href="contact.php">Contact Us</a></li>
+				<li><a href="contactUs.php">Contact Us</a></li>
 				<li><a href="login.php" class="active">Log In</a></li>
-				<li><a href="about.php">About Us</a></li>
-				<li><a href="elements.php">Elements</a></li>
+				<!-- <li><a href="about.php">About Us</a></li> -->
+				<!-- <li><a href="elements.php">Elements</a></li> -->
 			</ul>
 		</nav>
 	<section class="wrapper">
@@ -96,13 +96,13 @@
 				    <div class="container">
 				    	<!-- user name input -->
 				      <label for="uname"><b>Username</b></label>
-				      <input type="text" placeholder="Enter Username" name="name" id="name" value=""><br>
-				      <span class="error"> <?php echo $nameErr;?></span>
+				      <input type="text" placeholder="Enter Username" name="name" id="name" value="" onunfocus="login()"><br>
+				      <!-- <span class="error"> <?php echo $nameErr;?></span> -->
 				<br><br>
 				      	<!-- password input -->
 				      <label for="psw"><b>Password</b></label>
 				      <input type="password" placeholder="Enter Password" name="password" id="password" ><br>
-				      <span class="error"><?php echo $passwordErr;?></span>
+				      <!-- <span class="error"><?php echo $passwordErr;?></span> -->
 				<br><br>
 				      <!-- show password -->
 				      <br>
@@ -112,7 +112,7 @@
 					</div>
 
 				    </div>
-				    <div class="col-6 col-12-small">
+				    <div class="col-12 col-12-small"><br>
 						<span class="error"><?php echo $loginErr;?></span>
 
 					</div>
@@ -121,7 +121,7 @@
 				    </div>
 				    <div class="col-12 col-12-small">
 								<ul class="actions">
-									<li><input type="submit" value="Log In" class="primary" /></li>
+									<li><input type="submit" value="Log In" name="submit" class="primary" /></li>
 									<li><input type="reset" value="Reset" /></li>
 								</ul>
 					</div>

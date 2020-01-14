@@ -1,4 +1,9 @@
 <!DOCTYPE HTML>
+<?php
+session_start();
+ ?>
+
+
 <html>
 	<head>
 		<title>A-CET</title>
@@ -7,13 +12,17 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
 		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 	</head>
 	<body class="is-preload" onload="">
 		<!-- login script -->
-		
+		<?php  
+
+if($_SESSION["user"]){
+	
+?>
 		<!-- Header -->
 			<header id="header">
 				<a class="logo" href="office system.php">A-CET Computers</a>
@@ -71,7 +80,7 @@
 						<section>
 							<div class="content">
 								<header>
-									<a href="entryBook.php" class="icon fa-pen"><span class="label">Icon</span>
+									<a href="entryBook.php" class="icon fa-file"><span class="label">Icon</span>
 									<h3>entry book</h3></a>
 								</header>
 							
@@ -80,7 +89,7 @@
 						<section>
 							<div class="content">
 								<header>
-									<a href="InqueryForm.php" class="icon fa-file"><span class="label">Icon</span></a>
+									<a href="InqueryForm.php" class="icon fa-pencil"><span class="label">Icon</span></a>
 									<h3>inquires</h3>
 								</header>
 							</div>
@@ -91,9 +100,23 @@
 									<a href="dataRecovery.php" class="icon fa-database"><span class="label">Icon</span>
 									<h3>Data Recovery</h3></a>
 								</header>
-								<!-- <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p> -->
 							</div>
 						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="technician.php" class="icon fa-users"><span class="label">Icon</span>
+									<h3> Our Technicians</h3></a>
+								</header>
+							</div>
+						</section><!-- <section>
+							<div class="content">
+								<header>
+									<a href="dataRecovery.php" class="icon fa-database"><span class="label">Icon</span>
+									<h3>Data Recovery</h3></a>
+								</header>
+							</div>
+						</section> -->
 					</div>
 				</div>
 			</section>
@@ -127,6 +150,11 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+<?php
+}
+else{
+	echo "please log in";
+}
+?>
 	</body>
 </html>

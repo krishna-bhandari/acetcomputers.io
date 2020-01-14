@@ -15,7 +15,7 @@
 <body>
 
 <header id="header">
-	<a class="logo" href="office system.php">A-CET Computers</a>
+	<a class="logo" href="index.php">A-CET Computers</a>
 	<nav>
 		<a href="#menu">Menu</a>
 	</nav>
@@ -31,9 +31,9 @@
 			<li><a href="acet shop.php">Acet Shop</a></li>
 			<li><a href="#">Acet Courses</a></li>
 			<li><a href="contactUs.php">Contact Us</a></li>
-			<li><a href="logOut.php">Log Out</a></li>
+			<!-- <li><a href="logOut.php">Log Out</a></li> -->
 			<!-- <li><a href="about.php">About Us</a></li> -->
-			<li><a href="elements.php">Elements</a></li>
+			<!-- <li><a href="elements.php">Elements</a></li> -->
 		</ul>
 	</nav>
 
@@ -49,10 +49,9 @@
 				       <p>Phone:056-533268</p>
 				    </div>
 				    <div class="col-6 col-12-xsmall"> 
-					<!-- <iframe src="https://www.google.com/maps/place/A-cet+Computer(laptop+repairing+center)+training+center+for+laptop+and+mobile/@27.6921803,84.427394,19.86z/data=!4m5!3m4!1s0x0:0x83575ba52b87e479!8m2!3d27.6922415!4d84.4273943" width="400" height="350" frameborder="0" style="border:0" allowfullscreen></iframe> -->
-					<img src="images/location.png" width="400" height="400">
+						<iframe src="http://maps.google.com/maps?q=acet%20chitwan%20kshetrapur%20bharatpur%2044207=10&output=embed" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 				    </div>
-			
+		
   			</div>
 		</div>
 	</section>

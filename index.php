@@ -36,7 +36,7 @@
 				<li><a href="login.php">Log In</a></li>
 				<!-- <li><a href="#">About Us</a></li> -->
 				<li><a href="elements.php">Elements</a></li>
-
+</ul>
 
 			</nav>
 
@@ -126,10 +126,9 @@
 			<section class="wrapper">
 				<div class="inner">
 					<header class="special">
-						<h2>Faucibus consequat lorem</h2>
-						<p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor.</p>
+						<h2>we also deal with accessories</h2>
+						<?php include 'slideShow.php'; ?>
 					</header>
-	
 					</div>
 			</section>			
 
