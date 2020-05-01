@@ -1,3 +1,76 @@
+<?php
+session_start();
+// Include config file
+require_once "config.php";
+ 
+// Define variables and initialize with empty values
+$name = $address = $salary = "";
+$name_err = $address_err = $salary_err = "";
+ 
+// Processing form data when form is submitted
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    // Validate name
+    $input_name = trim($_POST["name"]);
+    if(empty($input_name)){
+        $name_err = "Please enter a name.";
+    } elseif(!filter_var($input_name, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
+        $name_err = "Please enter a valid name.";
+    } else{
+        $name = $input_name;
+    }
+    
+    // Validate address
+    $input_address = trim($_POST["address"]);
+    if(empty($input_address)){
+        $address_err = "Please enter an address.";     
+    } else{
+        $address = $input_address;
+    }
+    
+    // Validate salary
+    $input_salary = trim($_POST["salary"]);
+    if(empty($input_salary)){
+        $salary_err = "Please enter the salary amount.";     
+    } elseif(!ctype_digit($input_salary)){
+        $salary_err = "Please enter a positive integer value.";
+    } else{
+        $salary = $input_salary;
+    }
+    
+    // Check input errors before inserting in database
+    if(empty($name_err) && empty($address_err) && empty($salary_err)){
+        // Prepare an insert statement
+        $sql = "INSERT INTO employees (name, address, salary) VALUES (?, ?, ?)";
+         
+        if($stmt = mysqli_prepare($link, $sql)){
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "sss", $param_name, $param_address, $param_salary);
+            
+            // Set parameters
+            $param_name = $name;
+            $param_address = $address;
+            $param_salary = $salary;
+            
+            // Attempt to execute the prepared statement
+            if(mysqli_stmt_execute($stmt)){
+                // Records created successfully. Redirect to landing page
+                header("location: index1.php");
+                exit();
+            } else{
+                echo "Something went wrong. Please try again later.";
+            }
+        }
+         
+        // Close statement
+        mysqli_stmt_close($stmt);
+    }
+    
+    // Close connection
+    mysqli_close($link);
+}
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +92,7 @@
 					$name = test_input($_POST["name"]);
 					$address = test_input($_POST["Address"]);
 					$contact = test_input($_POST["Contact"]);	
-					$gender = test_input($_POST["gender"]);	
+					// $gender = $_POST["gender"];	  
 					$email = test_input($_POST["Email"]);	
 					$topic = test_input($_POST["select"]);
 					// $source = test_input($_POST["checkbox"]);
@@ -60,14 +133,18 @@
 					  } else {
 					    $topic = test_input($_POST["select"]);
 					  }
-				
-					 }
+					}
 	?>
 </head>
 <body >
+	 <?php  
+
+if(isset($_SESSION["user"])){
+  
+?> 
 <!-- Header -->
 			<header id="header">
-				<a class="logo" href="office system.php">A-CET Computers</a>
+				<a class="logo" href="office-system.php">A-CET Computers</a>
 				<nav>
 					<a href="#menu">Menu</a>
 				</nav>
@@ -79,7 +156,7 @@
 		<!-- Nav -->
 			<nav id="menu">
 				<ul class="links">
-					<li><a href="index.php">Home</a></li>
+					<li><a href="office-system.php">Home</a></li>
 					<li><a href="#">Acet Shop</a></li>
 					<li><a href="#">Acet Courses</a></li>
 					<li><a href="contactUs.php">Contact Us</a></li>
@@ -179,7 +256,7 @@
 				</div>
 				<!-- Break -->
 				<div class="col-12">
-					<ul class="actions">
+					<ul class="actions ">
 						<li><input type="submit" value="Submit " class="primary" /></li>
 						<li><input type="reset" value="Reset" /></li>
 					</ul>
@@ -187,17 +264,20 @@
 			</div>
 		</form>
 </section>
-<!-- <script type="text/javascript">
-		d= new Date();
-		h=d.getHours();
-		m=d.getMinutes();
-		date=
-		document.getElementById("date").innerHTML= (d.getDate()+"/"+ d.getMonth()+"/"+ d.getFullYear());
-	</script> -->
 	<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+<?php
+}
+
+
+else{
+	header("location: login.php");
+}
+?>
+
 </body>
 </html>

@@ -11,6 +11,10 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+   
 </head>
 <body>
 
@@ -30,8 +34,8 @@
 			<li><a href="index.php">Home</a></li>
 			<li><a href="acet shop.php">Acet Shop</a></li>
 			<li><a href="#">Acet Courses</a></li>
-			<li><a href="contactUs.php">Contact Us</a></li>
-			<!-- <li><a href="logOut.php">Log Out</a></li> -->
+			<!-- <li><a href="contactUs.php">Contact Us</a></li> -->
+			<li><a href="logOut.php">Log Out</a></li>
 			<!-- <li><a href="about.php">About Us</a></li> -->
 			<!-- <li><a href="elements.php">Elements</a></li> -->
 		</ul>

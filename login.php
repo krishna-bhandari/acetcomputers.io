@@ -27,6 +27,8 @@ session_start();
 			}
 	</style>
 	<?php
+
+	
 	  	// define variables and set to empty values
 		$name = $password ="";
 		$loginErr = "";
@@ -47,8 +49,8 @@ session_start();
               {
 	               // echo ("connected successfully");
 	              	if ($row["user_name"]==$name && $row["password"]==$password) {
+	              		// $_SESSION["admin"]=$name;
 	              		$_SESSION["user"]=$name;
-	              		$_SESSION["pass"]=$password;
 	              	}
 	              	else{
 	            	$loginErr="Invalid User name or Password";
@@ -56,9 +58,16 @@ session_start();
 
              	}
              	if (isset($_SESSION["user"])) {
-	    	           	header("location:office system.php");
+	    	           	header("location:office-system.php");
              		
              	}
+             	else
+             	{
+             		header("location:login.php");
+             	}
+            }
+            else{
+            	echo "No Users available";
             }
         } 
     ?>
@@ -74,10 +83,12 @@ session_start();
 		<nav id="menu">
 			<ul class="links">
 				<li><a href="index.php">Home</a></li>
-				<li><a href="#">Acet Shop</a></li>
-				<li><a href="#">Acet Courses</a></li>
+				<li><a href="shop.php ">Acet Shop</a></li>
+				<!-- <li><a href="#">Acet Courses</a></li> -->
+				<li><a href="register.php">Sign Up</a></li>
+
 				<li><a href="contactUs.php">Contact Us</a></li>
-				<li><a href="login.php" class="active">Log In</a></li>
+				<!-- <li><a href="login.php" class="active">Log In</a></li> -->
 				<!-- <li><a href="about.php">About Us</a></li> -->
 				<!-- <li><a href="elements.php">Elements</a></li> -->
 			</ul>
@@ -96,7 +107,7 @@ session_start();
 				    <div class="container">
 				    	<!-- user name input -->
 				      <label for="uname"><b>Username</b></label>
-				      <input type="text" placeholder="Enter Username" name="name" id="name" value="" onunfocus="login()"><br>
+				      <input type="text" placeholder="Enter Username" name="name" id="name" value=""><br>
 				      <!-- <span class="error"> <?php echo $nameErr;?></span> -->
 				<br><br>
 				      	<!-- password input -->
@@ -105,7 +116,6 @@ session_start();
 				      <!-- <span class="error"><?php echo $passwordErr;?></span> -->
 				<br><br>
 				      <!-- show password -->
-				      <br>
 					<div class="col-6 col-12-small">
 						<input type="checkbox" id="checkbox-alpha" name="checkbox" onclick="showPass()">
 						<label for="checkbox-alpha">Show Password</label>
@@ -120,27 +130,16 @@ session_start();
 				      <span class="psw">Forgot <a href="#">password?</a></span>
 				    </div>
 				    <div class="col-12 col-12-small">
-								<ul class="actions">
-									<li><input type="submit" value="Log In" name="submit" class="primary" /></li>
-									<li><input type="reset" value="Reset" /></li>
-								</ul>
+						<ul class="actions">
+							<li><input type="submit" value="Log In" name="submit" class="primary" /></li>
+							<li><input type="reset" value="Reset" /></li>
+						</ul>
 					</div>
 			</form>
 		</div>
 	</section>
 
 	<script type="text/javascript">
-		function login(){
-			name =document.getElementById("name").value
-			pass=document.getElementById("Password").value
-			alert(name+pass)
-			if (name=="krishna" && pass==123456) {
-			window.open("office system.html")
-			}
-			else{
-				alert("login failed")
-			}
-		}
 		function showPass() {
 		  var x = document.getElementById("password");
 		  if (x.type === "password") {
