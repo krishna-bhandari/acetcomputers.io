@@ -29,7 +29,7 @@ $(function () {
     $(".pay-khalti").on('click', function (e) {
         e.preventDefault();
         var self = $(e.target);
-        console.log(e, "Clickedd !!!! ");
+        // console.log(e, "Clickedd !!!! ");
 
         var id = self.attr("id");
 
