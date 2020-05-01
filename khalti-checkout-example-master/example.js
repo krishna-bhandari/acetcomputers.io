@@ -7,10 +7,10 @@ var config = {
     "eventHandler": {
         onSuccess(payload) {
             // hit merchant api for initiating verfication
-            console.log(payload);
+            // console.log(payload);
         },
         onError(error) {
-            console.log(error);
+            // console.log(error);
         }
     }
 };

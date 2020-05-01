@@ -1,11 +1,11 @@
 // basic requests debugging. 
 // displays info below the product listing
-function debuginfo(alertclass, msg) {
-    var _msg = $("<div class='alert'></div>");
-    _msg.append(msg);
-    _msg.addClass("alert-" + alertclass);
-    $("#alert-content").append(_msg);
-}
+// function debuginfo(alertclass, msg) {
+//     var _msg = $("<div class='alert'></div>");
+//     _msg.append(msg);
+//     _msg.addClass("alert-" + alertclass);
+//     $("#alert-content").append(_msg);
+// }
 
 // receive token and ajax call to server side script,
 // which then calls to khalti api for the payment verification

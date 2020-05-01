@@ -88,7 +88,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+     <!--    <div class="row">
             <div class='col-sm-12'>
                 <hr />
                 <h4 class="card-title">Checkout Integration</h4>
@@ -98,9 +98,9 @@
                 </p>
             </div>
 
-        </div>
+        </div> -->
 
-        <div class="row">
+       <!--  <div class="row">
             <div class='col-sm-12'>
                 <p class="card-text">
                     <strong>Current Example</strong>
@@ -108,7 +108,7 @@
                 </p>
             </div>
 
-        </div>
+        </div> -->
 
     </div>
     </div>
@@ -119,14 +119,14 @@
 <script type="text/javascript">
     $(function(){
         // just show the live js here.
-        $.ajax({url: "khalti-client.js", success: function(resp){
-            $("#js-code-here").text(resp.trim());
-            addEventListener('load', function(event) { PR.prettyPrint(); }, false);
-        }, dataType: 'html'});
-        $.get({url: "example.js", success: function(resp){
-            $("#js-example-here").text(resp.trim());
-            addEventListener('load', function(event) { PR.prettyPrint(); }, false);
-        }, dataType: 'html'});
+        // $.ajax({url: "khalti-client.js", success: function(resp){
+        //     $("#js-code-here").text(resp.trim());
+        //     addEventListener('load', function(event) { PR.prettyPrint(); }, false);
+        // }, dataType: 'html'});
+        // $.get({url: "example.js", success: function(resp){
+        //     $("#js-example-here").text(resp.trim());
+        //     addEventListener('load', function(event) { PR.prettyPrint(); }, false);
+        // }, dataType: 'html'});
     });
 </script>
 </html>
